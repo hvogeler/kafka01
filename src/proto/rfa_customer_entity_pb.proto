@@ -1,0 +1,476 @@
+// GENERATED
+syntax = "proto3";
+package over18.proto;
+
+import "entity_header_pb.proto";
+
+message rfa_customer_payload_pb_t {
+	message generic_pb_t {
+		message interaction_pb_t {
+			string category = 1;
+			int64 duration = 2;
+		}
+		string name = 1;
+		string cust_id = 2;
+		sint32 birth_date = 3;
+		string preferred_language = 4;
+		string country = 5;
+		double days_until_next_birthday = 6;
+		string local_weather = 7;
+		int64 current_system_time = 10;
+		string last_message = 11;
+		int64 last_message_ts = 12;
+		string net_promoter_score = 13;
+		string customer_value = 14;
+		string lifetime_opportunity = 15;
+		string pays_on_time = 16;
+		string pays_in_full = 17;
+		sint32 customer_birthday = 19;
+		double customer_age = 20;
+		int64 number_all_contacts_last_7_days = 21;
+		int64 number_marcomms_last_7_days = 22;
+		string permit_share_location = 23;
+		string permit_marketing_comms = 24;
+		string session_status = 25;
+		string session_type = 26;
+		int64 session_start_time = 27;
+		string session_geo_location = 28;
+		string household_id = 29;
+		string session_touchpoint = 30;
+		string region_state = 31;
+		string session_nearest_branch = 32;
+		string session_slot_placement = 33;
+		string session_proposition = 34;
+		string session_response = 35;
+		string session_agent_queue = 36;
+		double session_largest_today_txn_value = 37;
+		double session_credit_card_balance = 38;
+		double session_checking_acc_balance = 39;
+		double session_available_credit = 40;
+		string session_inbound_nba = 42;
+		string email_address = 43;
+		repeated interaction_pb_t interaction = 44;
+	}
+	message financial_pb_t {
+		message mortgage_pb_t {
+			message mortgage_aip_latest_event_pb_t {
+				string __current = 1;
+				string __previous = 2;
+				int64 __last_changed_ts = 3;
+				bool __just_changed = 4;
+			}
+			string mortgage_aip_state = 1;
+			string mortgage_aip_buyer_type = 2;
+			string mortgage_aip_latest_click = 3;
+			string mortgage_journey_state = 4;
+			string mortgage_aip_num_applicants = 5;
+			string mortgage_aip_reference_num = 6;
+			string mortgage_aip_property_value = 7;
+			string mortgage_aip_amount_to_borrow = 8;
+			string mortgage_aip_deposit = 9;
+			string mortgage_aip_loan_to_value = 10;
+			string mortgage_aip_regular_income = 11;
+			string mortgage_aip_regular_expenditure = 12;
+			string mortgage_aip_latest_event_type = 13;
+			mortgage_aip_latest_event_pb_t mortgage_aip_latest_event = 14;
+			int64 mortgage_aip_last_updated = 15;
+			int64 mortgage_aip_first_initiated = 16;
+		}
+		message credit_card_pb_t {
+			message card1_pb_t {
+				message near_limit_level_passed_pb_t {
+					string __current = 1;
+					string __previous = 2;
+					int64 __last_changed_ts = 3;
+					bool __just_changed = 4;
+				}
+				message latest_service_action_pb_t {
+					string __current = 1;
+					string __previous = 2;
+					int64 __last_changed_ts = 3;
+					bool __just_changed = 4;
+				}
+				int64 num_debits_last_30_days = 1;
+				int64 last_transaction_timestamp = 2;
+				double account_credit_limit = 3;
+				double requested_near_limit_notification_level = 4;
+				int64 last_debit_timestamp = 5;
+				near_limit_level_passed_pb_t near_limit_level_passed = 6;
+				double last_debit_value = 7;
+				string last_debit_classification = 8;
+				string last_debit_region = 9;
+				string last_debit_merchant_class = 10;
+				string last_debit_merchant_name = 11;
+				double latest_balance = 13;
+				string credit_card_id = 14;
+				double total_debits_last_30_days = 18;
+				double closing_balance = 21;
+				double opening_balance = 22;
+				double debits_since_opening = 23;
+				repeated double average_opening_balance = 26;
+				repeated double minimum_of_opening_balance = 27;
+				string latest_service_process_state = 30;
+				string latest_service_process = 31;
+				latest_service_action_pb_t latest_service_action = 32;
+				double highest_value_debit_last_7_days = 33;
+				int64 cc_number_txs_today = 34;
+			}
+			card1_pb_t card1 = 3;
+		}
+		message current_account_pb_t {
+			message account1_pb_t {
+				message latest_marketing_action_pb_t {
+					string __current = 1;
+					string __previous = 2;
+					int64 __last_changed_ts = 3;
+					bool __just_changed = 4;
+				}
+				message near_limit_level_passed_pb_t {
+					string __current = 1;
+					string __previous = 2;
+					int64 __last_changed_ts = 3;
+					bool __just_changed = 4;
+				}
+				double latest_balance = 2;
+				double last_debit_value = 3;
+				double avg_balance_last_30_days = 4;
+				double min_balance_last_7_days = 5;
+				double max_balance_last_7_days = 6;
+				double avg_balance_last_7_days = 7;
+				double overdraft_limit = 8;
+				string overdraft_state = 9;
+				latest_marketing_action_pb_t latest_marketing_action = 11;
+				string latest_marketing_process = 12;
+				string latest_marketing_process_state = 13;
+				double closing_balance = 14;
+				double opening_balance = 15;
+				repeated double average_opening_balance = 20;
+				double debits_since_opening = 21;
+				repeated double minimum_of_opening_balance = 23;
+				string last_debit_region = 26;
+				string last_debit_merchant_class = 27;
+				string last_debit_classification = 28;
+				string last_debit_merchant_name = 29;
+				int64 last_debit_timestamp = 31;
+				double requested_near_limit_notification_level = 32;
+				string credit_status = 33;
+				near_limit_level_passed_pb_t near_limit_level_passed = 34;
+				int64 num_debits_last_30_days = 35;
+				double total_debits_last_30_days = 37;
+				double highest_value_debit_last_7_days = 38;
+				int64 cc_number_txs_today = 39;
+			}
+			account1_pb_t account1 = 2;
+		}
+		message all_pb_t {
+			message f_02_risk_band_pb_t {
+				string __current = 1;
+				string __previous = 2;
+				int64 __last_changed_ts = 3;
+				bool __just_changed = 4;
+			}
+			message latest_marketing_action_pb_t {
+				string __current = 1;
+				string __previous = 2;
+				int64 __last_changed_ts = 3;
+				bool __just_changed = 4;
+			}
+			message latest_service_action_pb_t {
+				string __current = 1;
+				string __previous = 2;
+				int64 __last_changed_ts = 3;
+				bool __just_changed = 4;
+			}
+			int64 f_02_risk_assessment = 3;
+			f_02_risk_band_pb_t f_02_risk_band = 4;
+			string f_01_instant_loan = 5;
+			string latest_marketing_process = 6;
+			latest_marketing_action_pb_t latest_marketing_action = 7;
+			string latest_marketing_process_state = 8;
+			double total_credit_granted = 9;
+			latest_service_action_pb_t latest_service_action = 11;
+			string latest_service_process = 12;
+			string latest_service_process_state = 13;
+			double total_credit_remaining = 14;
+			double total_credit_used = 15;
+			string instant_loan_valid = 16;
+			int64 ned_big_txn_last_4_hours = 17;
+			string employment_status = 18;
+			string bad_debt_flag = 19;
+			double assets_under_management = 20;
+			double monthly_income = 21;
+			double months_in_employment = 22;
+			double max_credit_used_last_90d = 23;
+			string homeowner = 24;
+		}
+		mortgage_pb_t mortgage = 4;
+		credit_card_pb_t credit_card = 15;
+		current_account_pb_t current_account = 16;
+		all_pb_t all = 22;
+	}
+	message comms_mu_pb_t {
+		message contract_pb_t {
+			message mobile_pb_t {
+				message latest_service_action_pb_t {
+					string __current = 1;
+					string __previous = 2;
+					int64 __last_changed_ts = 3;
+					bool __just_changed = 4;
+				}
+				message latest_marketing_action_pb_t {
+					string __current = 1;
+					string __previous = 2;
+					int64 __last_changed_ts = 3;
+					bool __just_changed = 4;
+				}
+				double downlink_dataload_total_24h = 1;
+				string last_session_rat = 2;
+				string last_session_type = 3;
+				string last_session_protocol = 4;
+				string last_session_location_lac = 6;
+				string last_session_location_rac = 7;
+				string last_session_location_sac = 8;
+				string last_session_location_cell = 9;
+				double last_session_length = 10;
+				double last_session_qos_requested = 16;
+				int64 count_sessions_last_24_hours = 21;
+				int64 count_video_sessions_last_24_hours = 25;
+				string signal_code = 27;
+				string signal = 28;
+				double last_session_uplink_bitrate = 29;
+				double last_session_downlink_bitrate = 30;
+				double last_session_uplink_latency = 31;
+				double last_session_downlink_latency = 32;
+				double last_session_uplink_data_load = 33;
+				double last_session_uplink_packet_loss = 34;
+				double last_session_downlink_packet_loss = 35;
+				double last_session_downlink_data_load = 36;
+				int64 signal_ts = 38;
+				double last_session_video_jitter = 39;
+				double last_session_owned_media_class = 40;
+				double last_session_owned_media_content = 41;
+				string mobile_contract_term = 43;
+				double mobile_contract_cost = 44;
+				string mobile_contract_type = 45;
+				string mobile_contract_data_allowance = 46;
+				double mobile_contract_max_data_speed = 47;
+				string mobile_contract_handset = 48;
+				double mobile_contract_days_to_expiry = 49;
+				string mobile_contract_media_package = 50;
+				string mobile_contract_wearable_option = 51;
+				string mobile_contract_service_options = 52;
+				double mobile_contract_media_cost = 53;
+				double mobile_contract_wearable_cost = 54;
+				double mobile_contract_service_option_cost = 55;
+				double uplink_latency_max_24h = 57;
+				double uplink_latency_min_24h = 58;
+				double uplink_latency_min_30d = 61;
+				double uplink_latency_max_30d = 62;
+				int64 count_sessions_last_30_days = 64;
+				int64 count_video_sessions_last_30_days = 65;
+				double uplink_packetloss_min_24h = 75;
+				double uplink_packetloss_max_24h = 76;
+				double uplink_packetloss_min_30d = 78;
+				double uplink_packetloss_max_30d = 79;
+				double uplink_bitrate_max_24h = 83;
+				double uplink_bitrate_min_24h = 84;
+				double uplink_bitrate_min_30d = 86;
+				double uplink_bitrate_max_30d = 87;
+				double uplink_bitrate_av_24h = 91;
+				double uplink_latency_av_24h = 93;
+				double uplink_packetloss_av_24h = 94;
+				double downlink_bitrate_min_24h = 95;
+				double downlink_bitrate_max_24h = 96;
+				double downlink_bitrate_av_24h = 97;
+				double downlink_bitrate_min_30d = 98;
+				double downlink_bitrate_max_30d = 99;
+				double downlink_bitrate_av_30d = 100;
+				double downlink_latency_max_24h = 108;
+				double downlink_latency_min_24h = 109;
+				double downlink_latency_av_24h = 111;
+				double downlink_latency_max_30d = 112;
+				double downlink_latency_min_30d = 113;
+				double downlink_latency_av_30d = 114;
+				double downlink_packetloss_max_24h = 115;
+				double uplink_packetloss_av_30d = 116;
+				double downlink_packetloss_min_24h = 117;
+				double downlink_packetloss_av_24h = 118;
+				double downlink_packetloss_av_30d = 119;
+				double downlink_packetloss_min_30d = 120;
+				double downlink_packetloss_max_30d = 121;
+				double uplink_latency_av_30d = 124;
+				double uplink_bitrate_av_30d = 125;
+				latest_service_action_pb_t latest_service_action = 126;
+				string latest_service_process = 127;
+				string latest_service_process_state = 128;
+				latest_marketing_action_pb_t latest_marketing_action = 129;
+				string latest_marketing_process = 130;
+				string latest_marketing_process_state = 131;
+				double downlink_dataload_total_30d = 132;
+				double uplink_dataload_total_24h = 134;
+				double uplink_dataload_total_30d = 135;
+				double last_session_dataload_total = 136;
+				double total_dataload_24h = 137;
+				double total_dataload_30d = 138;
+				string last_session_location_region = 139;
+				int64 last_session_calc_start_time = 144;
+				int64 last_session_ts_end_time = 145;
+				string last_session_region_name = 146;
+				string last_session_site_name = 147;
+				string last_session_classification = 148;
+				string last_session_cell_name = 149;
+				double bill_cycle_days_remaining = 150;
+				double mobile_data_allowance_limit = 151;
+				double mobile_data_used_so_far_this_month = 152;
+				double gaming_hours_so_far_this_month = 153;
+				double video_hours_so_far_this_month = 154;
+				double mobile_video_hours_since_hub_synch = 155;
+				double mobile_gaming_hours_since_hub_synch = 156;
+				double hours_of_gaming_this_month = 157;
+				double hours_of_video_this_month = 158;
+				double mobile_qos_avg_last_10_minutes = 159;
+				double mobile_qos_avg_last_10_days = 160;
+				double mobile_data_used_since_hub_synch = 161;
+				double mobile_data_usage_this_bill_cycle = 162;
+				double mobile_data_allowance_remaining = 163;
+				double mobile_data_allowance_remaining_pcent = 164;
+				double mobile_monthly_revenue_additional_packs = 165;
+				double mobile_this_month_media_purchases = 166;
+				double data_charges_this_month = 167;
+				double mobile_this_month_total_user_revenue = 168;
+				string retention_risk = 169;
+				string mobile_retention_nba = 170;
+				string mobile_revenue_opportunity = 171;
+				string mobile_anomaly_nba = 172;
+				string anomaly_detection = 173;
+				string mobile_revenue_nba = 174;
+				int64 count_network_signals_10_mins = 175;
+				string signal_cell_id = 176;
+				double mobile_this_month_media_purchases_ifany = 179;
+				double data_charges_this_month_ifany = 180;
+				double mobile_qos_avg_last_30_days = 185;
+				double mobile_qos_avg_last_24_hours = 186;
+				string last_session_roam_flag = 187;
+				double session_qos_negotiated = 188;
+				double vm02_recent_gaming_hours = 189;
+				double data_packs_this_bill_cycle_gb = 191;
+				double data_packs_this_month_value = 192;
+				double mobile_credit_limit = 193;
+				string mobile_credit_status = 196;
+			}
+			message fixed_pb_t {
+				string fixed_contract_type = 1;
+				double fixed_contract_cost = 3;
+				string fixed_contract_term = 4;
+				double fixed_contract_days_to_expiry = 5;
+				string fixed_contract_media_package = 6;
+				string fixed_contract_service_options = 7;
+				string fixed_contract_home_iot_option = 8;
+				string fixed_contract_home_wifi_option = 9;
+				double bill_cycle_days_remaining = 10;
+				double fixed_contract_max_data_speed = 11;
+				double fixed_contract_home_iot_option_cost = 12;
+				double fixed_contract_home_wifi_hub_cost = 13;
+				double fixed_contract_media_package_cost = 14;
+				double fixed_contract_service_options_cost = 15;
+				double fixed_this_month_media_purchases = 16;
+				double fixed_gaming_mins_since_hub_synch = 17;
+				double fixed_video_mins_since_hub_synch = 18;
+				double fixed_voice_mins_since_hub_synch = 19;
+				double fixed_data_used_since_hub_synch = 20;
+				double fixed_contract_wifi_media_iot_per_month = 21;
+				double fixed_this_month_total_user_revenue = 22;
+				string fixed_retention_nba = 23;
+				string fixed_revenue_nba = 24;
+				string fixed_anomaly_nba = 25;
+				string fixed_retention_risk = 26;
+				string fixed_revenue_opportunity = 27;
+				string fixed_anomaly_detection = 28;
+				double mobile_this_month_media_purchases_ifany = 30;
+				double fixed_contract_wifi_iot_per_month = 31;
+			}
+			mobile_pb_t mobile = 1;
+			fixed_pb_t fixed = 2;
+		}
+		message prepay_pb_t {
+			message journey_status_pb_t {
+				string __current = 1;
+				string __previous = 2;
+				int64 __last_changed_ts = 3;
+				bool __just_changed = 4;
+			}
+			string prepaid_contract_type = 1;
+			double prepaid_revenue_this_month = 2;
+			double reload_value_idr = 11;
+			int64 reload_date = 12;
+			string offer_bundle_applied = 13;
+			double purchased_minutes = 14;
+			double latest_reload_youtube = 15;
+			double latest_reload_other_data = 16;
+			double last_usage_seconds = 17;
+			double last_usage_youtube_gb = 18;
+			double last_usage_data_gb = 19;
+			double minutes_since_reload = 20;
+			double target_minutes = 21;
+			double target_youtube_gb = 22;
+			double target_data_gb = 23;
+			double target_reload_value = 24;
+			double youtube_since_reload = 25;
+			double data_since_reload_copy = 26;
+			double youtube_this_month = 27;
+			double data_this_month_copy = 28;
+			double minutes_this_month = 29;
+			double reload_value_this_month = 30;
+			int64 reload_number_this_month = 31;
+			double performance_minutes = 32;
+			double performance_youtube = 33;
+			double performance_otherdata = 34;
+			double performance_reload_value = 35;
+			string latest_touch = 36;
+			journey_status_pb_t journey_status = 37;
+			string touch_detail = 38;
+			string touchpoint = 39;
+			int64 touch_date = 40;
+			string latest_signal = 41;
+			string signal_detail = 42;
+			string signal_source = 43;
+			int64 signal_date = 44;
+			double purchased_minutes_this_month = 45;
+			double purchased_data_this_month = 46;
+			double purchased_youtube_this_month = 47;
+			int64 remaining_minutes = 48;
+			double remaining_youtube = 49;
+			double remaining_other_data = 50;
+			string lifecycle_priority = 51;
+			string primary_goal = 52;
+			string next_best_action = 53;
+		}
+		message all_pb_t {
+			double monthly_revenue_mobile_subscriptions = 1;
+			double this_month_revenue_prepaid = 3;
+			double this_month_total_user_revenue = 6;
+			string cosolidated_mobile_contract = 7;
+			string cosolidated_fixed_contract = 8;
+			string cosolidated_prepaid_subscription = 9;
+			double this_month_revenue_fixed = 11;
+			string consolidated_retention_nba = 12;
+			string consolidated_revenue_nba = 13;
+			string cosolidated_unified_contract = 14;
+			double unified_mobile_fixed_revenue = 15;
+			double unified_contract_cost = 16;
+		}
+		contract_pb_t contract = 9;
+		prepay_pb_t prepay = 11;
+		all_pb_t all = 13;
+	}
+	generic_pb_t generic = 1;
+	financial_pb_t financial = 2;
+	comms_mu_pb_t comms_mu = 5;
+}
+
+message rfa_customer_pb_t {
+	entity_header_payload_pb_t entity_header = 1;
+	rfa_customer_payload_pb_t entity_payload = 2;
+	entity_segments_payload_pb_t entity_segments = 3;
+}
+

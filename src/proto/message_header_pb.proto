@@ -1,0 +1,13 @@
+syntax = "proto3";
+ package over18.proto;
+
+message message_header_payload_pb_t {
+  string request_id = 1;  
+  string message_name = 2;
+  string entity_id = 3;
+  int64 message_ts = 4;
+}
+ 
+message message_header_pb_t {
+  message_header_payload_pb_t message_header = 1;
+}

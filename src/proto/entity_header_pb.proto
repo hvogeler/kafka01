@@ -1,0 +1,56 @@
+syntax = "proto3";
+package over18.proto;
+
+message key_value_pair_double_pb_t {
+  string key = 1;
+  double value = 2;
+}
+
+message key_value_pair_int32_pb_t {
+  string key = 1;
+  int32 value = 2;
+}
+
+message key_value_pair_sint32_pb_t {
+  string key = 1;
+  sint32 value = 2;
+}
+
+message key_value_pair_int64_pb_t {
+  string key = 1;
+  int64 value = 2;
+}
+
+message key_value_pair_uint32_pb_t {
+  string key = 1;
+  uint32 value = 2;
+}
+
+message key_value_pair_uint64_pb_t {
+  string key = 1;
+  uint64 value = 2;
+}
+
+message key_value_pair_string_pb_t {
+  string key = 1;
+  string value = 2;
+}
+ 
+message entity_header_payload_pb_t {
+  string entity_name = 1;
+  string entity_id = 2;
+  int64 ts = 3;
+  string subset_name = 4;
+  string request_id = 5;
+  string time_zone = 6;
+  int64 cycle_day = 7;
+}
+
+message entity_segments_payload_pb_t {
+  repeated string dynamic = 1;
+  repeated string saved = 2;
+}
+ 
+message entity_header_pb_t {
+  entity_header_payload_pb_t entity_header = 1;
+}

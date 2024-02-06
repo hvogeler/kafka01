@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+package over18.proto;
+import "message_header_pb.proto";
+import "entity_header_pb.proto";
+import "rfa_customer_entity_pb.proto";
+
+message over_18_message_payload_pb_t {
+	int64 amount_spent = 1;
+	string entity_name = 2;
+}
+
+message over_18_message_pb_t {
+	message_header_payload_pb_t message_header = 1;
+	over_18_message_payload_pb_t message_payload = 2;
+	rfa_customer_payload_pb_t subset = 3;
+	entity_segments_payload_pb_t entity_segments = 4;
+}
